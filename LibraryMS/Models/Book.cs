@@ -34,5 +34,17 @@ namespace LibraryMS.Models
 
         public List<BorrowRecord> borrowRecords { get; set; }
         public Category category { get; set; }
+
+        public override string ToString()
+        {
+            return
+                $"Book ID: {Id}\n" +
+                $"Title: {Title}\n" +
+                $"Author: {Author}\n" +
+                $"ISBN: {ISBN}\n" +
+                $"Published Year: {publishedYear:yyyy}\n" +
+                $"Copies Available: {CopiesAvalible}\n" +
+                $"Category ID: {CategoryId}\n";
+        }
     }
 }
